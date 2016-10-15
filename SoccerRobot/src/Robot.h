@@ -15,6 +15,10 @@
 
 class Robot: public IterativeRobot{
 
+public:
+	static std::shared_ptr<DriveTrain> drive_train;
+
+	static std::unique_ptr<OI> oi;
 
 private:
 	std::unique_ptr<Command> autonomousCommand;

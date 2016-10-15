@@ -20,4 +20,17 @@
 //const int RANGE_FINDER_PORT = 1;
 //const int RANGE_FINDER_MODULE = 1;
 
+namespace RobotMap{
+
+const int OPERATOR_INPUT_PORT = 0;
+
+const int RIGHT_DRIVE_MOTOR_PORT = 1;
+const int LEFT_DRIVE_MOTOR_PORT = 2;
+
+const int PUSHER_MOTOR_PORT = 3;
+//AKA FLIPPER_MOTOR_PORT
+const int BLOCKER_MOTOR_PORT = 4;
+//AKA FLAPPER_MOTOR_PORT
+}
+
 #endif

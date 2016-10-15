@@ -8,10 +8,9 @@
 #include "ArcadeDrive.h"
 #include "../Robot.h"
 #include "../Models/Vector.h"
-#include "Command.h"
 #include <math.h>
 
-ArcadeDrive::ArcadeDrive(): Command(“ArcadeDrive””){
+ArcadeDrive::ArcadeDrive(): Command("ArcadeDrive"){
 	Requires(Robot::drive_train.get());
 }
 
@@ -26,9 +25,9 @@ void ArcadeDrive::Execute(){
 
 	if(v.x>0){
 		leftSpeedMod = 1;
-		rightSpeedMod = 1-v.x/v.getMagnitude();
+		rightSpeedMod = 1-2*(v.x/v.getMagnitude());
 	}else{
-		leftSpeedMod = 1-v.x/v.getMagnitude();
+		leftSpeedMod = 1-2*(v.x/v.getMagnitude());
 		rightSpeedMod = 1;
 	}
 

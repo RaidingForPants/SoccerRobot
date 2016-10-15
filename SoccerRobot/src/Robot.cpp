@@ -1,6 +1,8 @@
 #include "Robot.h"
 
+	std::shared_ptr<DriveTrain> Robot::drive_train;
 
+	std::unique_ptr<OI> Robot::oi;
 
 	void Robot::RobotInit()
 	{

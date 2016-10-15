@@ -3,11 +3,12 @@
 
 #include "WPILib.h"
 
-class OI
-{
-private:
+#include "Models/XBoxController.h"
 
+class OI {
 public:
+	std::shared_ptr<XBoxController> xbox_controller;
+
 	OI();
 };
 
