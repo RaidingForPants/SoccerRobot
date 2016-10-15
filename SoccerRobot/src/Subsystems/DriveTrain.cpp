@@ -64,6 +64,10 @@ double DriveTrain::ReturnPIDInput() {
 	return (left_primary_motor->GetPosition() + right_primary_motor->GetPosition()) / 2;
 }
 
+void DriveTrain::returnPosition(int motor){
+	SmartDashboard::PutNumber("Motor Position", ((motor == 0) ? left_primary_motor->GetPosition() : right_primary_motor->GetPosition()));
+}
+
 void DriveTrain::Reset() {
 	drive(0, 0);
 

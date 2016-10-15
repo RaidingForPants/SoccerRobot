@@ -23,6 +23,8 @@ public:
 	void UsePIDOutput(double output);
 	double ReturnPIDInput();
 
+	void returnPosition(int motor);
+
 private:
 	std::unique_ptr<RobotDrive> robot_drive;
 
