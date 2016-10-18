@@ -23,7 +23,7 @@ DriveTrain::DriveTrain(): Subsystem("DriveTrain") {
 	);
 
 	left_primary_motor->Set(0, 0);
-	right_primary_motor->Set(0, 0);
+	right_primary_motor->Set(0, 1);
 
 	//SetOutputRange(-1, 1);
 
