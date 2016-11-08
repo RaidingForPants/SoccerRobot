@@ -25,9 +25,9 @@ void ArcadeDrive::Execute(){
 
 	if(v.x>0){
 		leftSpeedMod = 1;
-		rightSpeedMod = 1-2*(v.x/v.getMagnitude());
+		rightSpeedMod = 1-1.25*(v.x/v.getMagnitude());
 	}else{
-		leftSpeedMod = 1-2*(v.x/v.getMagnitude());
+		leftSpeedMod = 1-1.25*(v.x/v.getMagnitude());
 		rightSpeedMod = 1;
 	}
 
