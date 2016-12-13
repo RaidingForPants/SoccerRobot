@@ -59,7 +59,7 @@ bool XBoxController::getRightTriggerAsButton() {
 	return getRightTrigger()>= RIGHT_TRIGGER_BUTTON_THRESHOLD;
 }
 
-/*std::shared_ptr<JoystickButton> XBoxController::getJoystickButton(int id) {
+std::shared_ptr<JoystickButton> XBoxController::getJoystickButton(int id) {
 	if(joystick_button_map.count(id) == 0) {
 		joystick_button_map[id] = std::shared_ptr<JoystickButton>(new JoystickButton(wpilib_joystick.get(), id));
 	}
@@ -67,7 +67,7 @@ bool XBoxController::getRightTriggerAsButton() {
 	return joystick_button_map[id];
 }
 
-std::shared_ptr<XboxControllerTriggerButton> XBoxController::getTriggerJoystickButton(int id, float threshold) {
+/*std::shared_ptr<XboxControllerTriggerButton> XBoxController::getTriggerJoystickButton(int id, float threshold) {
 	if(trigger_joystick_button_map.count(id) == 0) {
 		trigger_joystick_button_map[id] = std::shared_ptr<XboxControllerTriggerButton>(
 				new XboxControllerTriggerButton(this, id, threshold)

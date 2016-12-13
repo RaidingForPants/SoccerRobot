@@ -7,7 +7,11 @@
 OI::OI() {
 	xbox_controller = std::shared_ptr<XBoxController>(new XBoxController(RobotMap::OPERATOR_INPUT_PORT));
 
-	//xbox_controller->getButton(XBoxController::BUTTON_A_ID)->WhenPressed(/*run the pusher for 1 cycle (hopefully)*/);
+	xbox_controller->getJoystickButton(XBoxController::BUTTON_A_ID)->WhenPressed(new SetPusherPosition());
+
+	xbox_controller->getJoystickButton(XBoxController::BUTTON_A_ID);
+
+
 
 	//xbox_controller->getButton(XBoxController::BUTTON_B_ID)->WhenPressed(/*extend/retract the blockers*/);
 	//xbox_controller->getButton(XBoxController::BUTTON_X_ID)->WhenPressed(/*"Slap" with blockers*/);
