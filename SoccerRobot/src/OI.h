@@ -7,7 +7,7 @@
 
 class OI {
 public:
-	std::shared_ptr<XBoxController> xbox_controller;
+	static std::shared_ptr<XBoxController> xbox_controller;
 
 	OI();
 };

@@ -12,8 +12,6 @@
 
 DriveTrain::DriveTrain(): Subsystem("DriveTrain") {
 
-	//ASK NILS WHAT MOTOR ENCODER
-
 	left_primary_motor = std::shared_ptr<CANTalon>(new CANTalon(RobotMap::LEFT_DRIVE_MOTOR_PORT));
 
 	right_primary_motor = std::shared_ptr<CANTalon>(new CANTalon(RobotMap::RIGHT_DRIVE_MOTOR_PORT));

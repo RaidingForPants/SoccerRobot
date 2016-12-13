@@ -52,22 +52,22 @@ public:
 
 	XBoxController(int port);
 
-	Vector getLeftStick();
-	Vector getRightStick();
-	Vector getStick(int xId, int yId, Vector offset);
-	float getLeftTrigger();
-	float getRightTrigger();
-	float getTrigger(int id);
+	static Vector getLeftStick();
+	static Vector getRightStick();
+	static Vector getStick(int xId, int yId, Vector offset);
+	static float getLeftTrigger();
+	static float getRightTrigger();
+	static float getTrigger(int id);
 
-	bool getButton(int id);
-	bool getDPad(int angle);
-	bool getLeftTriggerAsButton();
-	bool getRightTriggerAsButton();
+	static bool getButton(int id);
+	static bool getDPad(int angle);
+	static bool getLeftTriggerAsButton();
+	static bool getRightTriggerAsButton();
 
-	void Calibrate();
+	static void Calibrate();
 
-	//std::shared_ptr<JoyStickButton> getJoystickButton(int id);
-	//std::shared_ptr<XBoxControllerTriggerButton> getTriggerJoystickButton(int id, float threshold);
+	std::shared_ptr<JoystickButton> getJoystickButton(int id);
+	std::shared_ptr<XboxControllerTriggerButton> getTriggerJoystickButton(int id, float threshold);
 
 private:
 
