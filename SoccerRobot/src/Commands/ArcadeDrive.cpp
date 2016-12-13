@@ -19,7 +19,7 @@ void ArcadeDrive::Initialize(){
 }
 
 void ArcadeDrive::Execute(){
-	Vector v = Robot::oi->xbox_controller->getLeftStick;
+	Vector v = Robot::oi->xbox_controller->getLeftStick();
 
 	baseSpeed=v.getMagnitude();
 
